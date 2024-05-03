@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.who-i-am {
+    width: 100%;
+    height: 20vh;
+    background-color: #6A1741;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    text-align: center;
+}
+
+.who-i-am h1{
+    color: #d6d6d6;
+    font-weight: bold;
+    font: 2rem Arial, sans-serif;
+}
+
+
+.who-i-am p{
+    color: #d6d6d6;
+    font: 1rem Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+.container-likes{
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container-likes h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.like-stuff{
+    margin: 2rem 0 0 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+
+    column-gap: 1.5rem;
+}
+
+.card-style{
+    padding: 2rem;
+    background-color: #d6d6d6;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-style:nth-child(odd){
+    background-color: black;
+    color: white
+}
+
+.card-style > h3{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-element > h4{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-element > p{
+    font-size: 0.9rem;
+}
+
+.card-element > p:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.card-style > img{
+    width: 100%;
+    height: 10rem;
+
+    border: 0.5rem double #000;
+    border-radius: 1rem;
+
+    object-fit: cover;
+    filter: sepia(100%);
+}
+
+.card-style:nth-child(odd) > img{
+    border: 0.5rem double #fff;
+    filter: sepia(0%);
+}
+
+footer{
+    height: 10rem;
+    background-color: #6A1741;
+    color: #d6d6d6;    
+
+    position: relative;
+}
+
+.container-links{
+    position: absolute;
+    left: 3rem;
+    bottom: 4rem;
+
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+}
+
+.container-links > h2{
+    font-size: 1.1rem;
+}
+
+.container-links > a{
+    font-size: 1rem;
+    color: #d6d6d6;
+    text-decoration: none;
+    
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.container-links > a:visited {
+    color: #add8e6;
+    text-decoration: underline;
+}
+
+.container-links > a:hover {
+    color: #4169e1;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+footer > p{
+    width: 50%;
+    margin: auto;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .who-i-am h1{
+        font-size: 1.5rem;
+    }
+    .like-stuff{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        row-gap: 1.5rem;
+    }
+
+    .container-links{
+        margin: 0 25% 0 25%;
+
+        left: 0;
+        right: 0;
+        bottom: 6rem;
+        
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 640px) {
+    .like-stuff{
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 1.5rem;
+    }
+
+    .container-links{
+        margin: 0 15% 0 15%;
+    }
+}
